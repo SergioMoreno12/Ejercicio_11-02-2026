@@ -6,13 +6,13 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        // Crear algunos productos
+        //Productos
         Producto p1 = new Producto("Teclado Mecánico", 150000);
         Producto p2 = new Producto("Mouse Gamer", 85000);
         Producto p3 = new Producto("Monitor 24 pulg", 650000);
         Producto p4 = new Producto("Cable HDMI", 25000);
 
-        // Crear un Pedido
+        // Crear pedidos
         List<Producto> listvacia1 = new ArrayList<>();
         System.out.println("--- Creando Pedido 1 ---");
         Pedido pedido1 = new Pedido(1, listvacia1 );

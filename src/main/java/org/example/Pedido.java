@@ -1,6 +1,4 @@
 package org.example;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Pedido {
@@ -40,7 +38,7 @@ public class Pedido {
                 '}';
     }
 
-    // Agragar producto al pedido
+    // Agregar producto al pedido
     public void agregarProducto(Producto producto) {
         productos.add(producto);
         System.out.println("Producto agregado: " + producto.getNombre());
@@ -58,19 +56,21 @@ public class Pedido {
     // Mostrar detalles del pedido
     public void mostrarDetalles() {
         System.out.println("--------------------------------");
-        System.out.println("PEDIDO #" + idPedido);
+        System.out.println(" DETALLES DEL PEDIDO #" + idPedido);
         System.out.println("--------------------------------");
 
         if (productos.isEmpty()) {
             System.out.println("El pedido está vacío.");
         } else {
+            System.out.println("PRODUCTO       |       PRECIO");
             for (Producto p : productos) {
-                System.out.println(p); // Llama automáticamente al toString() de Producto
+                System.out.println("- " + p.getNombre() + ": $ " + p.getPrecio());
             }
         }
 
         System.out.println("--------------------------------");
-        //System.out.println("TOTAL:$               ", calcularTotal());
+        System.out.println("TOTAL A PAGAR:      $ " + this.calcularTotal());
         System.out.println("--------------------------------");
     }
+
 }
